@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement Settings")]
     [SerializeField] private float _speed = 5f;
+    [SerializeField] private float _runSpeed = 10f;
     [SerializeField] private float _turningSpeed = 2f;
     [SerializeField] private float _gravity = 9.81f;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [Header("Inputs")]
     private float _horizontalInput;
     private float _verticalInput;
+    private bool _isRunning; 
 
     private void Start()
     {
@@ -39,10 +41,11 @@ public class PlayerController : MonoBehaviour
 
     private void GroundMovement()
     {
-        Vector3 move = new Vector3 (_horizontalInput, 0f, _verticalInput);
+        Vector3 move = new Vector3(_horizontalInput, 0f, _verticalInput);
         move = transform.TransformDirection(move);
 
-        move *= _speed;
+        float currentSpeed = _isRunning ? _runSpeed : _speed;
+        move *= currentSpeed;
 
         move.y = ApplyGravity();
 
@@ -79,5 +82,6 @@ public class PlayerController : MonoBehaviour
     {
         _horizontalInput = Input.GetAxis("Horizontal");
         _verticalInput = Input.GetAxis("Vertical");
+        _isRunning = Input.GetKey(KeyCode.LeftShift); 
     }
 }
