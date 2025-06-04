@@ -15,7 +15,6 @@ public class recogermonedas : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger detectado con: " + other.gameObject.name);
         if (other.gameObject.CompareTag("Moneda"))
         {
             Moneda moneda = other.GetComponent<Moneda>();
