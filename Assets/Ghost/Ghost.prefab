@@ -5068,7 +5068,6 @@ GameObject:
   - component: {fileID: 5461036951844439356}
   - component: {fileID: 3248811605822733986}
   - component: {fileID: 2701303055910139201}
-  - component: {fileID: 6510193320721213064}
   - component: {fileID: 3008202582026904624}
   m_Layer: 0
   m_Name: Ghost
@@ -5242,7 +5241,6 @@ MonoBehaviour:
   navAgent: {fileID: 0}
   target: {fileID: 0}
   pathUpdate: 0
-  chasing: 0
 --- !u!136 &2701303055910139201
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5266,33 +5264,6 @@ CapsuleCollider:
   m_Height: 3.5
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!54 &6510193320721213064
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307500787134134728}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!195 &3008202582026904624
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5325,6 +5296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3966269754671949964}
   - component: {fileID: 4809289400266590555}
+  - component: {fileID: 1788267556866375846}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -5362,9 +5334,21 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.1194196, y: 0.71864235, z: 7.942928}
-  m_Center: {x: -0.21622133, y: 0.50280666, z: 3.4714634}
+  m_Size: {x: 8.802643, y: 1.1075042, z: 11.852261}
+  m_Center: {x: -0.9339409, y: 0.6972377, z: 5.4261303}
+--- !u!114 &1788267556866375846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8068524872109366025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 273c626872b709841bc0f10102386cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

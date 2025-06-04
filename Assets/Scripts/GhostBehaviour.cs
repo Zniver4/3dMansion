@@ -18,7 +18,7 @@ public class GhostBehaviour : MonoBehaviour
     public Transform target;
     public float pathUpdate;
 
-    public bool chasing;
+    public static bool chasing;
     private void Start()
     {
         colors = ghostBody.colorOverLifetime;
@@ -47,7 +47,7 @@ public class GhostBehaviour : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        if(target != null & !chasing)
+        if(target != null)
         {
             bool inRange = Vector3.Distance(transform.position, target.forward)<=navAgent.stoppingDistance;
             if (inRange)
@@ -66,6 +66,7 @@ public class GhostBehaviour : MonoBehaviour
         {
             onHit?.Invoke();
             gameObject.SetActive(false);
+            chasing = false;
         }
     }
 

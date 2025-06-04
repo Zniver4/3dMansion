@@ -7931,7 +7931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghost: {fileID: 1578552301}
-  ghostTarget: {fileID: 0}
+  ghostTarget: {fileID: 1821349872}
+  player: {fileID: 1596267695}
   gorundFloor:
   - {fileID: 579590209}
   - {fileID: 1014646737}
@@ -20959,6 +20960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194228}
   _speed: 5
+  _runSpeed: 10
   _turningSpeed: 10
   _gravity: 9.81
 --- !u!1001 &1601613462
